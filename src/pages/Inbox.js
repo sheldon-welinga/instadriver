@@ -44,9 +44,12 @@ const Inbox = () => {
             <div className="chat-id">
               Chat ID: <strong>1234567</strong>
             </div>
-            <div className="chat-message chat-send">Lorem send to another</div>
+            <div className="chat-message chat-send">
+              Lorem send to another <span className="chat-time">11:00am</span>
+            </div>
             <div className="chat-message chat-received">
               Lorem received from a user
+              <span className="chat-time">11:20am</span>
             </div>
             <div className="chat-message chat-received">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore

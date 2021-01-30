@@ -550,6 +550,7 @@
 .inbox .inbox-top > div:last-child .btn {
   padding-left: 1rem;
   width: 153px;
+  margin-right: 2.7rem;
 }
 
 .inbox .inbox-top > div:last-child .btn::after,
@@ -696,6 +697,10 @@
   white-space: normal;
 }
 
+.chats .chat-title {
+  font-weight: 600;
+}
+
 .chat-main-section .single-user .single-user-message h4 {
   font-size: 18px;
 }
@@ -757,8 +762,9 @@
 /* ---------------------------end of chats section-------------- */
 
 /* --------------------------chat messages----------------------- */
-.chats {
-  height: 100%;
+
+.chat {
+  position: relative;
 }
 
 .chat-messages {
@@ -785,9 +791,18 @@
   padding: 0.63rem;
   width: fit-content;
   background-color: #ecf2fa;
-  margin: 1rem;
+  line-height: 145%;
+  margin: 2.5rem 1rem;
   max-width: 485.86px;
   border-radius: 15px 15px 0px 15px;
+}
+
+.chat-messages .chat-message .chat-time {
+  position: absolute;
+  left: 1rem;
+  bottom: -1.4rem;
+  color: #c4c4c4;
+  font-size: 15px;
 }
 
 .chat-message.chat-received {
@@ -795,13 +810,16 @@
   background-color: #fcf2f7;
 }
 
+.chat-message.chat-received .chat-time {
+  left: auto;
+  right: 1rem;
+}
+
 .message-box {
   border: 0.7px solid #ffbb00;
   border-radius: 15px;
   margin: 1rem;
   margin-top: 100%;
-  position: relative;
-  bottom: 0;
 }
 
 .message-box .form-group {
