@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import InboxTop from "../components/InboxTop";
 import SingleUser from "../components/SingleUser";
@@ -8,6 +8,16 @@ import { GrEmoji } from "react-icons/gr";
 import { BsFillMicFill } from "react-icons/bs";
 
 const Inbox = () => {
+  const [show, setShow] = useState(false);
+  const [contactInfoShow, setContactInfoShow] = useState(false);
+
+  const toggleShow = () => {
+    setShow(!show);
+  };
+
+  const toggleContactInfoShow = () => {
+    setContactInfoShow(!contactInfoShow);
+  };
   return (
     <div className="inbox">
       <InboxTop />
@@ -28,15 +38,47 @@ const Inbox = () => {
             <p className="users-name">Sheldon Welinga</p>
             <p className="follow">@sheldon_welinga</p>
           </div>
+
+          <div
+            className={show ? "close-delete-chat show" : "close-delete-chat"}
+          >
+            <button className="btn btn-default">Close Chat</button>
+            <button className="btn btn-default">Delete Chat</button>
+          </div>
+
+          <div
+            className={
+              contactInfoShow
+                ? "chat-contact-info show-info"
+                : "chat-contact-info"
+            }
+          >
+            <div className="contact-title">
+              <span className="fa fa-info"></span>&nbsp;Contact Info
+            </div>
+            <div className="content">
+              <span>Mobile Number</span>
+              <strong className="content-info">0733221133</strong>
+            </div>
+            <div className="content">
+              <span>Email Address</span>
+              <strong className="content-info">johndoe@gmail.com</strong>
+            </div>
+          </div>
+
           <div className="chat-heading">
             <div className="chat-title">
               Inquiry about relocation from nairobi
             </div>
+
             <div className="chat-info">
-              <button className="btn btn-default">
-                <span className="fa fa-info"></span>Chat info
+              <button
+                className="btn btn-default"
+                onClick={toggleContactInfoShow}
+              >
+                <span className="fa fa-info"></span>Contact info
               </button>
-              <span className="fa fa-ellipsis-v"></span>
+              <span className="fa fa-ellipsis-v" onClick={toggleShow}></span>
             </div>
           </div>
           {/* -------chat messages------- */}
