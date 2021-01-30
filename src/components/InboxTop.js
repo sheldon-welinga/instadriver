@@ -32,7 +32,7 @@ const InboxTop = () => {
           </div> */}
         </div>
         <div className="inbox-top-section">
-          <button>Start a new chart</button>
+          <button className="btn btn-warning">Start a new chat</button>
         </div>
       </div>
     </>
