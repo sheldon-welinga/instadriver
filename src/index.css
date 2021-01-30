@@ -555,7 +555,7 @@
 .inbox .inbox-top > div:first-child .filter-menu {
   position: absolute;
   top: 25%;
-  margin-left: 21%;
+  right: 2.5rem;
   z-index: 100;
   width: 297.61px;
   height: 313.29px;

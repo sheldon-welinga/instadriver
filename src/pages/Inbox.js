@@ -13,10 +13,12 @@ const Inbox = () => {
 
   const toggleShow = () => {
     setShow(!show);
+    setContactInfoShow(false);
   };
 
   const toggleContactInfoShow = () => {
     setContactInfoShow(!contactInfoShow);
+    setShow(false);
   };
   return (
     <div className="inbox">
