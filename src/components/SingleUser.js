@@ -6,9 +6,11 @@ const SingleUser = ({ chat, setActiveChat }) => {
 
   const handleClick = () => {
     setActiveChat(chat);
+    document
+      .querySelector(".chat-main-section > div:first-child")
+      .classList.add("show");
   };
 
-  // console.log(messages);
   return (
     <div
       className={unread <= 0 ? "single-user read" : "single-user"}

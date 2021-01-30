@@ -31,10 +31,43 @@
 
 .app .app-sections .sidebar {
   width: 226px;
+  transition: all 0.3s ease-in-out;
 }
 
 .app .app-sections > div {
   flex: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .app .app-sections .sidebar {
+    width: 80px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app .app-sections .sidebar .name {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app .app-sections .sidebar:hover {
+    width: 226px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app .app-sections .sidebar:hover .name {
+    display: block;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .app .app-sections {
+    position: relative;
+  }
+  .app .app-sections .sidebar {
+    position: sticky;
+    z-index: 20;
+  }
 }
 
 .btn {
@@ -358,6 +391,13 @@
   color: #6e01c7;
 }
 
+@media screen and (max-width: 600px) {
+  .footer .footer-top::after,
+  .footer .footer-top::before {
+    top: 35%;
+  }
+}
+
 @media screen and (max-width: 438px) {
   .footer .footer-top::before {
     display: none;
@@ -366,7 +406,9 @@
   .footer .footer-top::after {
     width: 90%;
     left: 0;
+    top: 25%;
   }
+
   .footer .footer-bottom {
     flex-wrap: nowrap;
     flex-direction: column;
@@ -393,11 +435,7 @@
   margin: 5px 0;
 }
 
-.sidebar .sidebar-menu li.active {
-  position: relative;
-}
-
-.sidebar .sidebar-menu li.active {
+.sidebar .sidebar-menu li.unread-messages {
   position: relative;
 }
 
@@ -419,10 +457,13 @@
   width: 100%;
   height: 100%;
   font-size: 0.9rem;
-  color: var(--white);
   display: inline-flex;
   align-items: center;
   padding: 0.5rem;
+}
+
+.sidebar .sidebar-menu a span {
+  color: var(--white);
   transition: all 0.3s ease-in-out;
 }
 
@@ -442,8 +483,8 @@
   background-color: var(--graywhite);
 }
 
-.sidebar .sidebar-menu li.active a,
-.sidebar .sidebar-menu li:hover a,
+.sidebar .sidebar-menu li.active a span,
+.sidebar .sidebar-menu li:hover a span,
 .sidebar .sidebar-menu li:hover .icon path,
 .sidebar .sidebar-menu li.active .icon path {
   color: var(--black);
@@ -1024,6 +1065,72 @@
 }
 
 /* ---------------------end of chat messages---------------------- */
+@media screen and (max-width: 796px) {
+  .chat-main-section {
+    flex-direction: column;
+  }
+  .inbox .chat-main-section > div:first-child {
+    max-width: 100%;
+  }
+
+  .chat-main-section > div:first-child.show ~ div {
+    display: block;
+  }
+
+  .chat-main-section > div:last-child,
+  .chat-main-section > div:first-child.show {
+    display: none;
+  }
+
+  .inbox .chat-main-section > div:last-child {
+    margin-top: 1.5rem;
+  }
+
+  .inbox .chat-user-profile {
+    top: 0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inbox {
+    position: relative;
+  }
+
+  .inbox .inbox-top > div:last-child {
+    display: none;
+  }
+
+  .inbox .inbox-top > div:first-child {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .inbox .inbox-top::before {
+    content: "\002B";
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--white);
+    z-index: 100;
+    right: 2rem;
+    top: 60vh;
+    font-size: 2.5rem;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .inbox .inbox-top:hover::before {
+    content: "\002B Start a new chart";
+    width: fit-content;
+    padding: 0.2px 0.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+}
 
 /* ================END OF INBOX MAIN CHAT SECTION============= */
 

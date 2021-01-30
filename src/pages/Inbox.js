@@ -32,16 +32,10 @@ const Inbox = () => {
       setChats(data.chats);
 
       setActiveChat(data.chats[0]);
-
-      //   console.log(data);
     };
 
     fetchData();
   }, []);
-
-  //   const handleClick = (e) => {
-  //     console.log(e);
-  //   };
 
   return (
     <div className="inbox">

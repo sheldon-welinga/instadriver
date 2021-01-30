@@ -15,6 +15,10 @@ const SideBar = () => {
       link.addEventListener("click", () => {
         links.forEach((link) => link.classList.remove("active"));
         link.classList.add("active");
+
+        document
+          .querySelector(".chat-main-section > div:first-child")
+          .classList.remove("show");
       })
     );
   }, []);
@@ -26,49 +30,49 @@ const SideBar = () => {
           <li>
             <Link to="/accounts/profile">
               <CgUserList className="icon" />
-              &nbsp;Employer Profile
+              &nbsp;<span className="name">Employer Profile</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/onboard-your-vehicles">
               <IoMdCar className="icon" />
-              &nbsp;Onboard Your Vehicles
+              &nbsp;<span className="name">Onboard Your Vehicles</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/search-and-hire-drivers">
               <BsSearch className="icon" />
-              &nbsp;Search &amp; Hire Drivers
+              &nbsp;<span className="name">Search &amp; Hire Drivers</span>
             </Link>
           </li>
           <li className="active unread-messages">
             <Link to="/accounts/inbox">
               <BsEnvelope className="icon" />
-              &nbsp;Inbox
+              &nbsp;<span className="name">Inbox</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/recruitment">
               <BsBriefcaseFill className="icon" />
-              &nbsp;Recruitment
+              &nbsp;<span className="name">Recruitment</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/my-organisations">
               <ImTree className="icon" />
-              &nbsp;My Organizations
+              &nbsp;<span className="name">My Organizations</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/rate-a-driver">
               <AiTwotoneStar className="icon" />
-              &nbsp;Rate a Driver
+              &nbsp;<span className="name">Rate a Driver</span>
             </Link>
           </li>
           <li>
             <Link to="/accounts/my-subscription">
               <IoMdCard className="icon" />
-              &nbsp;My Subscription
+              &nbsp;<span className="name">My Subscription</span>
             </Link>
           </li>
         </ul>

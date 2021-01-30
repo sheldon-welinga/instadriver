@@ -9,6 +9,15 @@ import Home from "./pages/Home";
 import Inbox from "./pages/Inbox";
 
 const App = () => {
+  window.addEventListener("popstate", (event) => {
+    const showChat = document.querySelector(
+      ".chat-main-section > div:first-child"
+    );
+
+    if (showChat.classList.contains("show")) {
+      showChat.classList.remove("show");
+    }
+  });
   return (
     <div className="app">
       <Header />
