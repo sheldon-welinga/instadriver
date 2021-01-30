@@ -1096,6 +1096,8 @@
 @media screen and (max-width: 600px) {
   .inbox {
     position: relative;
+    width: 100%;
+    padding: 0;
   }
 
   .inbox .inbox-top > div:last-child {
@@ -1135,6 +1137,38 @@
 
   .inbox .inbox-top.hide::before {
     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inbox .chat-main-section > div:first-child {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .single-user {
+    flex-direction: column;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .single-user .single-user-message {
+    margin-bottom: 1rem;
+  }
+
+  .single-user .single-user-profile {
+    margin-left: -9rem;
+    margin-top: -0.3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .single-user .single-user-profile p {
+    display: none;
+  }
+
+  .inbox .inbox-top > div:first-child,
+  .inbox .inbox-top > div:last-child {
+    min-width: 250px;
   }
 }
 
