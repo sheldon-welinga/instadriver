@@ -9,6 +9,7 @@ const SingleUser = ({ chat, setActiveChat }) => {
     document
       .querySelector(".chat-main-section > div:first-child")
       .classList.add("show");
+    document.querySelector(".inbox .inbox-top").classList.add("hide");
   };
 
   return (

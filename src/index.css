@@ -1069,6 +1069,8 @@
   .chat-main-section {
     flex-direction: column;
   }
+
+  .inbox .chat-main-section > div:last-child,
   .inbox .chat-main-section > div:first-child {
     max-width: 100%;
   }
@@ -1116,7 +1118,7 @@
     color: var(--white);
     z-index: 100;
     right: 2rem;
-    top: 60vh;
+    top: 90%;
     font-size: 2.5rem;
     background-color: var(--yellow);
     border-radius: 50%;
@@ -1129,6 +1131,10 @@
     padding: 0.2px 0.5rem;
     font-size: 1rem;
     border-radius: 30px;
+  }
+
+  .inbox .inbox-top.hide::before {
+    display: none;
   }
 }
 

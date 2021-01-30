@@ -16,6 +16,7 @@ const App = () => {
 
     if (showChat.classList.contains("show")) {
       showChat.classList.remove("show");
+      document.querySelector(".inbox .inbox-top").classList.remove("hide");
     }
   });
   return (
