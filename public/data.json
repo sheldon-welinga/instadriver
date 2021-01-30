@@ -1,0 +1,50 @@
+{
+  "chats": [
+    {
+      "id": "3362Gd2",
+      "name": "Sheldon Welinga",
+      "profile": "/images/profile-image.jpg",
+      "follow": "sheldon_welinga",
+      "subject": "Inquiry about relocation",
+      "slug": "inquiry-about-relocation",
+      "unread": 2,
+      "messages": [
+        {
+          "content": "Hello Sheldon",
+          "sent": false,
+          "time": "11:49am",
+          "read": false
+        },
+        {
+          "content": "Hey too william",
+          "sent": true,
+          "time": "12:00am",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": "3362Gd3",
+      "name": "Lesley Wanjiku",
+      "profile": "/images/profile-image.jpg",
+      "follow": "lesley_w",
+      "subject": "My subscription inquiry",
+      "slug": "my-subscription-inquiry",
+      "unread": 0,
+      "messages": [
+        {
+          "content": "lorem ipusm",
+          "sent": true,
+          "time": "11:00am",
+          "read": false
+        },
+        {
+          "content": "I was asking about the status of my subscription",
+          "sent": false,
+          "time": "11:10am",
+          "read": false
+        }
+      ]
+    }
+  ]
+}

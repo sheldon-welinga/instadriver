@@ -605,7 +605,7 @@
 .inbox .inbox-top > div:last-child .btn {
   padding-left: 1rem;
   width: 153px;
-  margin-right: 2.7rem;
+  right: 8%;
 }
 
 .inbox .inbox-top > div:last-child .btn::after,
@@ -658,6 +658,7 @@
   align-items: center;
   background-color: #e8f5f9;
   box-shadow: 0px 1px 0px #ffbb00b7;
+  cursor: pointer;
 }
 
 .chat-main-section .single-user.read {

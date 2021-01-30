@@ -1,22 +1,33 @@
 import React from "react";
 
-const SingleUser = (props) => {
+const SingleUser = ({ chat, setActiveChat }) => {
+  // console.log(chat);
+  const { id, name, profile, follow, unread, subject, messages } = chat;
+
+  const handleClick = () => {
+    setActiveChat(chat);
+  };
+
+  // console.log(messages);
   return (
-    <div className={props.read ? "single-user read" : "single-user"}>
+    <div
+      className={unread <= 0 ? "single-user read" : "single-user"}
+      onClick={handleClick}
+    >
       <div className="single-user-profile">
-        <img src="/images/profile-image.jpg" alt=" user profile" />
-        <p className="users-name">Sheldon Welinga</p>
-        <p className="follow">@sheldon_welinga</p>
+        <img src={profile} alt=" user profile" />
+        <p className="users-name">{name}</p>
+        <p className="follow">@{follow}</p>
       </div>
       <div className="single-user-message">
-        <h4>Inquiry about relocation</h4>
-        <p>Vacancy adds helps you attract potential hires who are</p>
+        <h4>{subject}</h4>
+        <p>{messages[messages.length - 1].content}</p>
       </div>
       <div className="chat-id">
-        ChatID: <strong>3362Gd2</strong>
+        ChatID: <strong>{id}</strong>
       </div>
       <div className="chat-time">11:00am</div>
-      <div className="unread-chats-count">4</div>
+      <div className="unread-chats-count">{unread}</div>
     </div>
   );
 };
